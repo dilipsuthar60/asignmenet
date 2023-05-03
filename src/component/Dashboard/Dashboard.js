@@ -6,11 +6,10 @@ const Dashboard = () => {
   const [imagedata, setImagedata] = useState([]);
   const [tag, setTag] = useState([]);
   const [text, setText] = useState("");
-  const [main, setMain] = useState([]);
+
   useEffect(() => {
     let reponse = data();
     setImagedata(reponse);
-    setMain(reponse);
     let tagsdata = reponse.map((current) => {
       return current.labels;
     });
