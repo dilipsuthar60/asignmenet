@@ -17,7 +17,6 @@ const Dashboard = () => {
   }, []);
   const filteritem = () => {
     let data = imagedata;
-    console.log(data);
     let newdata = data.filter((element) => {
       let present = false;
       for (let i = 0; i < element.labels.length; i++) {
@@ -28,13 +27,14 @@ const Dashboard = () => {
       if (present) {
         return element;
       }
+      return "";
     });
     setImagedata(newdata);
     setText("");
   };
   const remove = (index, name) => {
     let newtage = tag.map((current, id) => {
-      if (id != index) {
+      if (id !== index) {
         return current;
       } else {
         let newdata = current.filter((tagname) => {
@@ -62,7 +62,7 @@ const Dashboard = () => {
     setTag(newtage);
   };
   const handlekeydown = (e, index) => {
-    if (e.key != "Enter") {
+    if (e.key !== "Enter") {
       return;
     }
     let value = e.target.value;
@@ -71,7 +71,7 @@ const Dashboard = () => {
     }
     console.log(value);
     let newdata = tag.map((element, id) => {
-      if (id != index) {
+      if (id !== index) {
         return element;
       } else {
         element.push(value);
@@ -79,7 +79,7 @@ const Dashboard = () => {
       }
     });
     let newimagedata = imagedata.map((current, id) => {
-      if (id != index) {
+      if (id !== index) {
         return current;
       } else {
         let obj = {
@@ -111,16 +111,16 @@ const Dashboard = () => {
       </div>
       <div className="card-container">
         {imagedata.map((element, index) => {
-          const { id, img, labels } = element;
+          const { id, img } = element;
           return (
             <div className="card" key={id}>
               <LazyLoadImage
                 src={img}
                 style={{ width: "17rem", height: "20rem" }}
               />
-              {tag[index].map((name) => {
+              {tag[index].map((name, index) => {
                 return (
-                  <div className="tag">
+                  <div className="tag" key={index / 1000004}>
                     <span className="tag-heading">{name}</span>
                     <span
                       className="cross"

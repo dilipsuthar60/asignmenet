@@ -17,7 +17,7 @@ const Login = ({ setissignupandlogin }) => {
     });
   const checkAuth = () => {
     const { email, password } = initialValues;
-    if (email.length == 0 && password.length == 0) {
+    if (email.length === 0 && password.length === 0) {
       alert("please enter valid value");
     }
   };
@@ -39,6 +39,7 @@ const Login = ({ setissignupandlogin }) => {
                 Email
               </label>
               <input
+                key={123}
                 autoComplete="off"
                 type="email"
                 placeholder="example@gmail.com"
@@ -58,6 +59,7 @@ const Login = ({ setissignupandlogin }) => {
                 Password
               </label>
               <input
+                key={1239904}
                 autoComplete="off"
                 type="password"
                 placeholder="******"

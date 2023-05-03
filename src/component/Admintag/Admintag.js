@@ -11,11 +11,10 @@ const Admintag = () => {
         tagsdata.push(value);
       });
     });
-    console.log(tagsdata);
     setTags(tagsdata);
   }, []);
   const handlekeydown = (e) => {
-    if (e.key != "Enter") {
+    if (e.key !== "Enter") {
       return;
     }
     let value = e.target.value;
@@ -26,7 +25,6 @@ const Admintag = () => {
     e.target.value = "";
   };
   const removetag = (index) => {
-    console.log(index);
     const newtage = tags.filter((element, id) => {
       return index !== id;
     });
