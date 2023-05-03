@@ -11,7 +11,12 @@ const Admintag = () => {
         tagsdata.push(value);
       });
     });
-    setTags(tagsdata);
+    let unique = new Set(tagsdata);
+    let nums = [];
+    for (let it of unique) {
+      nums.push(it);
+    }
+    setTags(nums);
   }, []);
   const handlekeydown = (e) => {
     if (e.key !== "Enter") {

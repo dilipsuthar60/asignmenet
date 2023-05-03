@@ -33,6 +33,7 @@ const Dashboard = () => {
     setText("");
   };
   const remove = (index, name) => {
+    console.log(index, name);
     let newtage = tag.map((current, id) => {
       if (id !== index) {
         return current;
@@ -118,9 +119,9 @@ const Dashboard = () => {
                 src={img}
                 style={{ width: "17rem", height: "20rem" }}
               />
-              {tag[index].map((name, index) => {
+              {tag[index].map((name, idx) => {
                 return (
-                  <div className="tag" key={index / 1000004}>
+                  <div className="tag" key={idx + 10}>
                     <span className="tag-heading">{name}</span>
                     <span
                       className="cross"
