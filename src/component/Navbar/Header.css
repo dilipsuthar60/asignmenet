@@ -1,0 +1,21 @@
+.home-navbar {
+    background-color: #f95700;
+    height: 50px;
+    padding: 6px 5%;
+}
+.navbar
+{
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.menu
+{
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.active
+{
+    border-bottom: 3px solid white;
+}

@@ -1,0 +1,75 @@
+.filter-section{
+    /* border: 2px solid red; */
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-input{
+    height: 2rem;
+    width: 20rem;
+    padding: .2rem;
+    margin: .5rem;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.filter-btn{
+    cursor: pointer;
+    height: 2.5rem;
+    width: 5rem;
+    background-color: #d63f15;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.card{ 
+    margin: 20px 0;
+    width: 17rem;
+    min-height: 25rem;
+    background-color:#d1d8e0;
+    border-radius: 5px;
+}
+.img
+{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 17rem;
+    height: 20rem;
+}
+.tag {
+    display: inline-block;
+    background-color: rgb(165, 165, 165);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 1px 3px;
+}
+
+.tag-heading {
+    padding: 3px;
+}
+
+.cross {
+    text-align: center;
+    display: inline-block;
+    color: red;
+    font-size: 16px;
+    font-family: 700;
+    cursor: pointer;
+}
+.input {
+    padding: 5px;
+    width: 7rem;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 0.5rem 0px;
+    /* outline: none; */
+}
